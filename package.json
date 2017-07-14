@@ -1,0 +1,27 @@
+{
+  "name": "ajg",
+  "version": "0.1.0",
+  "description": "Ajg: Another JSON Schema Generator",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2do2go/ajg.git"
+  },
+  "keywords": [
+    "json",
+    "schema",
+    "generator",
+    "conform",
+    "validator",
+    "validation"
+  ],
+  "author": "Artem Zhukov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/2do2go/ajg/issues"
+  },
+  "homepage": "https://github.com/2do2go/ajg#readme"
+}

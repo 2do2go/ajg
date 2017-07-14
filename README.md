@@ -1,2 +1,1 @@
-# ajg
-Ajg: Another JSON Schema Generator
+# Ajg: Another JSON Schema Generator
