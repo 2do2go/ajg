@@ -1,0 +1,52 @@
+{
+  "env": {
+    "node": true,
+    "mocha": true
+  },
+  "extends": "airbnb-base/legacy",
+  "plugins": [
+    "import"
+  ],
+  "rules": {
+    "semi": ["error", "always"],
+
+    "quotes": ["error", "single", "avoid-escape"],
+
+    "no-tabs": "off",
+    "indent": ["error", "tab", {
+      "SwitchCase": 1,
+      "VariableDeclarator": 1
+    }],
+
+    "no-param-reassign": "off",
+    "no-underscore-dangle": "off",
+    "vars-on-top": "off",
+
+    "strict": ["error", "global"],
+
+    "max-len": ["error", {
+      "code": 100,
+      "tabWidth": 1,
+      "ignoreUrls": true,
+      "ignoreComments": true,
+      "ignoreTemplateLiterals": true
+    }],
+
+    "no-console": ["error", {
+      "allow": ["info", "warn", "error"]
+    }],
+
+    "import/no-extraneous-dependencies": ["error", {
+      "devDependencies": [
+        "tests/**"
+      ],
+      "optionalDependencies": false
+    }],
+
+    "no-use-before-define": ["error", {
+      "functions": false,
+      "classes": true,
+      "variables": true
+    }]
+  }
+}

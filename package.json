@@ -4,7 +4,16 @@
   "description": "Ajg: Another JSON Schema Generator",
   "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sync": "npm prune && npm install",
+    "test": "nyc --reporter=text --reporter=lcov mocha tests/**",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "lint:_json": "jsonlint",
+    "lint:json": "npm run lint:_json -- *.json",
+    "lint:_js": "eslint --ext js --cache",
+    "lint:js": "npm run lint:_js -- ./",
+    "lint:all": "npm run lint:json && npm run lint:js",
+    "lint": "lint-staged",
+    "precommit": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -23,5 +32,33 @@
   "bugs": {
     "url": "https://github.com/2do2go/ajg/issues"
   },
-  "homepage": "https://github.com/2do2go/ajg#readme"
+  "homepage": "https://github.com/2do2go/ajg#readme",
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "coveralls": "^2.13.1",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.7.0",
+    "husky": "^0.14.3",
+    "jsonlint": "^1.6.2",
+    "lint-staged": "^4.0.1",
+    "mocha": "^3.4.2",
+    "nyc": "^11.0.3"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "lib/"
+  ],
+  "lint-staged": {
+    "*.json": [
+      "npm run lint:_json"
+    ],
+    "*.js": [
+      "npm run lint:_js"
+    ]
+  },
+  "nyc": {
+    "exclude": ["tests"]
+  }
 }
