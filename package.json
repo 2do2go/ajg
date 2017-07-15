@@ -1,6 +1,6 @@
 {
   "name": "ajg",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Ajg: Another JSON Schema Generator",
   "main": "lib/index.js",
   "scripts": {
@@ -62,6 +62,8 @@
     ]
   },
   "nyc": {
-    "exclude": ["tests"]
+    "exclude": [
+      "tests"
+    ]
   }
 }
