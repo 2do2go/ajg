@@ -1,5 +1,7 @@
 # Ajg: Another JSON Schema Generator
 
+[![Build Status](https://travis-ci.org/2do2go/ajg.svg?branch=master)](https://travis-ci.org/2do2go/ajg)
+
 Write your JSON-schemas in simple chainable manner. No plain JSON - no pain.
 
 
