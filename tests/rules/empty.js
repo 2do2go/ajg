@@ -1,19 +1,19 @@
 'use strict';
 
-var expect = require('chai').expect;
-var ajg = require('../../lib');
+const expect = require('chai').expect;
+const ajg = require('../../lib');
 
-describe('Rule `schema`', function () {
-	describe('if called', function () {
-		it('should produce empty schema', function () {
+describe('Rule `schema`', () => {
+	describe('if called', () => {
+		it('should produce empty schema', () => {
 			expect(ajg.schema).to.be.eql({});
 		});
 	});
 
-	describe('if called multiple twice', function () {
-		it('should produce cloned objects', function () {
-			var first = ajg.schema;
-			var second = ajg.schema;
+	describe('if called multiple twice', () => {
+		it('should produce cloned objects', () => {
+			const first = ajg.schema;
+			const second = ajg.schema;
 			expect(first).to.not.be.equal(second);
 		});
 	});

@@ -1,11 +1,11 @@
 'use strict';
 
-var expect = require('chai').expect;
-var ajg = require('../../lib');
+const expect = require('chai').expect;
+const ajg = require('../../lib');
 
-describe('Rule `exclusiveMaximum`', function () {
-	describe('if called', function () {
-		it('should produce schema with `exclusiveMaximum`', function () {
+describe('Rule `exclusiveMaximum`', () => {
+	describe('if called', () => {
+		it('should produce schema with `exclusiveMaximum`', () => {
 			expect(ajg.schema.exclusiveMaximum(3)).to.be.eql({ exclusiveMaximum: 3 });
 		});
 	});

@@ -1,11 +1,11 @@
 'use strict';
 
-var expect = require('chai').expect;
-var ajg = require('../../lib');
+const expect = require('chai').expect;
+const ajg = require('../../lib');
 
-describe('Rule `maxLength`', function () {
-	describe('if called', function () {
-		it('should produce schema with `maxLength`', function () {
+describe('Rule `maxLength`', () => {
+	describe('if called', () => {
+		it('should produce schema with `maxLength`', () => {
 			expect(ajg.schema.maxLength(3)).to.be.eql({ maxLength: 3 });
 		});
 	});

@@ -1,11 +1,11 @@
 'use strict';
 
-var expect = require('chai').expect;
-var ajg = require('../../lib');
+const expect = require('chai').expect;
+const ajg = require('../../lib');
 
-describe('Rule `any`', function () {
-	describe('if present', function () {
-		it('should produce schema with `type: any`', function () {
+describe('Rule `any`', () => {
+	describe('if present', () => {
+		it('should produce schema with `type: any`', () => {
 			expect(ajg.schema.any).to.be.eql({ type: 'any' });
 		});
 	});

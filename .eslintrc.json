@@ -1,12 +1,12 @@
 {
   "env": {
-    "node": true,
-    "mocha": true
+    "node": true
   },
-  "extends": "airbnb-base/legacy",
-  "plugins": [
-    "import"
-  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "script"
+  },
+  "extends": "airbnb-base",
   "rules": {
     "semi": ["error", "always"],
 
@@ -17,6 +17,10 @@
       "SwitchCase": 1,
       "VariableDeclarator": 1
     }],
+
+    "comma-dangle": ["error", "never"],
+    "prefer-rest-params": "off",
+    "prefer-spread": "off",
 
     "no-param-reassign": "off",
     "no-underscore-dangle": "off",
@@ -41,12 +45,6 @@
         "tests/**"
       ],
       "optionalDependencies": false
-    }],
-
-    "no-use-before-define": ["error", {
-      "functions": false,
-      "classes": true,
-      "variables": true
     }]
   }
 }

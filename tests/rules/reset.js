@@ -1,17 +1,17 @@
 'use strict';
 
-var expect = require('chai').expect;
-var ajg = require('../../lib');
+const expect = require('chai').expect;
+const ajg = require('../../lib');
 
-describe('Rule `reset`', function () {
-	describe('if called with arg', function () {
-		it('should unset key in schema', function () {
+describe('Rule `reset`', () => {
+	describe('if called with arg', () => {
+		it('should unset key in schema', () => {
 			expect(ajg.schema.required.array.reset('required')).to.be.eql({ type: 'array' });
 		});
 	});
 
-	describe('if called without args', function () {
-		it('should return empty schema', function () {
+	describe('if called without args', () => {
+		it('should return empty schema', () => {
 			expect(ajg.schema.required.array.reset()).to.be.eql({});
 		});
 	});

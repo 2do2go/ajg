@@ -45,6 +45,9 @@
     "mocha": "^3.4.2",
     "nyc": "^11.0.3"
   },
+  "engines": {
+    "node": ">=4"
+  },
   "files": [
     "LICENSE",
     "README.md",
